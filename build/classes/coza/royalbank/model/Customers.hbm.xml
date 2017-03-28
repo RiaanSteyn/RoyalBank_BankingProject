@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="Customers" table="customers">
+        <id name="cust_id" column="cust_id">
+            <generator class="identity"/>
+        </id>
+        <property name="cust_title" type="string" column="cust_title"/>
+        <property name="cust_first_name" type="string" column="cust_first_name"/>
+        <property name="cust_last_name" type="string" column="cust_last_name"/>
+        <property name="cust_id_number" type="string" column="cust_id_number"/>
+        <property name="cust_username" type="string" column="cust_username"/>
+        <property name="cust_password" type="string" column="cust_password"/>
+        <property name="cust_residential_address" type="string" column="cust_residential_address"/>
+        <property name="cust_residential_province" type="string" column="cust_residential_province"/>
+        <property name="cust_residential_postcode" type="string" column="cust_residential_postcode"/>
+        <property name="cust_postal_address" type="string" column="cust_postal_address"/>
+        <property name="cust_postal_province" type="string" column="cust_postal_province"/>
+        <property name="cust_postal_postcode" type="string" column="cust_postal_postcode"/>
+        <property name="cust_landline" type="string" column="cust_landline"/>
+        <property name="cust_mobile" type="string" column="cust_mobile"/>
+        <property name="cust_work" type="string" column="cust_work"/>        
+        <property name="cust_email" type="string" column="cust_email"/>
+        <property name="cust_gender" type="string" column="cust_gender"/>
+        <property name="cust_occupation" type="string" column="cust_occupation"/>
+        <property name="cust_institution" type="string" column="cust_institution"/>
+        <property name="cust_student_number" type="string" column="cust_student_number"/>
+        <property name="cust_company" type="string" column="cust_company"/>
+        <property name="cust_employee_number" type="string" column="cust_employee_number"/>
+        <property name="cust_salary" type="double" column="cust_salary"/>
+        <property name="cust_reg_date" type="date" column="cust_reg_date"/>
+        <property name="cust_enabled" type="boolean" column="cust_enabled"/>
+        <property name="cust_verifed" type="boolean" column="cust_verifed"/>
+        <property name="cust_verification_key" type="string" column="cust_verification_key"/>
+    </class>
+</hibernate-mapping>

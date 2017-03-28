@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings java://comp/env/ -->
+        <property name="hibernate.connection.datasource">java://comp/env/jdbc/RoyalBank</property>
+
+        <!-- JDBC connection pool -->
+        <property name="connection.pool_size">40</property>
+
+        <!-- SQL dialect org.hibernate.dialect.MySQL5InnoDBDialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+  		<property name="hbm2ddl.auto">update</property> 
+
+        <mapping resource="coza/royalbank/model/Accounts.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/Admin.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/Beneficiaries.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/Customers.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/CustLogins.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/CustToAcc.hbm.xml"/>
+        <mapping resource="coza/royalbank/model/Transactions.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

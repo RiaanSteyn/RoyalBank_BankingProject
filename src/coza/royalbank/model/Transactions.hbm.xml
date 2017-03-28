@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="Transactions" table="transactions">
+        <id name="trans_id" column="trans_id">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="customer" class="coza.royalbank.model.Customers" column="cust_id" cascade="save-update" />
+        <many-to-one name="cust_to_acc" class="coza.royalbank.model.CustToAcc" column="cust_to_acc_id" cascade="save-update" />
+        <property name="trans_payee_name" type="string" column="trans_payee_name"/>
+        <property name="trans_date" type="date" column="trans_date"/>
+        <property name="trans_description" type="string" column="trans_description"/>
+        <property name="trans_debit" type="boolean" column="trans_debit"/>
+        <property name="trans_credit" type="boolean" column="trans_credit"/>
+        <property name="trans_amount" type="double" column="trans_amount"/>        
+        <property name="trans_service_fee" type="double" column="trans_service_fee"/>
+    	<property name="trans_balance" type="double" column="trans_balance"/>
+    </class>
+
+</hibernate-mapping>

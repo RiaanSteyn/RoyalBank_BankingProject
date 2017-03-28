@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="Beneficiaries" table="beneficiaries">
+        <id name="ben_id" column="ben_id">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="customer" class="coza.royalbank.model.Customers" column="cust_id" cascade="save-update" />
+        <many-to-one name="account" class="coza.royalbank.model.Accounts" column="acc_id" cascade="save-update" />
+        <property name="ben_payment_name" type="string" column="ben_payment_name"/>
+        <property name="ben_acc_number" type="long" column="ben_acc_number"/>
+        <property name="ben_to_reference" type="string" column="ben_to_reference"/>
+        <property name="ben_from_reference" type="string" column="ben_from_reference"/>
+        <property name="ben_pop_type" type="string" column="ben_pop_type"/>
+        <property name="ben_email" type="string" column="ben_email"/>
+        <property name="ben_mobile" type="string" column="ben_mobile"/>
+        <property name="ben_deleted" type="boolean" column="ben_deleted"/>
+        <property name="ben_deleted_date" type="date" column="ben_deleted_date"/>
+    </class>
+</hibernate-mapping>

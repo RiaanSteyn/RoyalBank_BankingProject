@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="CustToAcc" table="cust_to_acc">
+        <id name="cust_acc_id" column="cust_acc_id">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="customer" class="coza.royalbank.model.Customers" column="cust_id" cascade="save-update" />
+        <many-to-one name="account" class="coza.royalbank.model.Accounts" column="acc_id" cascade="save-update" />
+        <property name="cust_acc_number" type="long" column="cust_acc_number"/>
+        <property name="cust_acc_daily_limit" type="double" column="cust_acc_daily_limit"/>
+        <property name="cust_acc_monthly_limit" type="double" column="cust_acc_monthly_limit"/>
+        <property name="cust_acc_alerts" type="string" column="cust_acc_alerts"/>
+        <property name="cust_acc_current_balance" type="double" column="cust_acc_current_balance"/>
+        <property name="cust_acc_available_balance" type="double" column="cust_acc_available_balance"/>
+        <property name="cust_acc_approved" type="boolean" column="cust_acc_approved"/>
+		<many-to-one name="adminApproved_by" class="coza.royalbank.model.Admin" column="cust_acc_approved_by" cascade="save-update" insert="false" update="false" />        
+        <property name="cust_acc_approved_date" type="date" column="cust_acc_approved_date"/>
+        <property name="cust_acc_declined" type="boolean" column="cust_acc_declined"/>
+        <many-to-one name="adminDeclined_by" class="coza.royalbank.model.Admin" column="cust_acc_declined_by" cascade="save-update" insert="false" update="false" />
+		<property name="cust_acc_declined_date" type="date" column="cust_acc_declined_date"/>
+		<property name="cust_acc_declined_reason" type="string" column="cust_acc_declined_reason"/>
+		<property name="cust_acc_closed" type="boolean" column="cust_acc_closed"/>
+        <many-to-one name="adminClosed_by" class="coza.royalbank.model.Admin" column="cust_acc_closed_by" cascade="save-update" insert="false" update="false"/>
+		<property name="cust_acc_closed_date" type="date" column="cust_acc_closed_date"/>
+    </class>
+
+</hibernate-mapping>

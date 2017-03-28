@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="Admin" table="admin">
+        <id name="admin_id" column="admin_id">
+            <generator class="identity"/>
+        </id>
+        <property name="admin_first_name" type="string" column="admin_first_name"/>
+        <property name="admin_last_name" type="string" column="admin_last_name"/>
+        <property name="admin_username" type="string" column="admin_username"/>
+        <property name="admin_password" type="string" column="admin_password"/>
+        <property name="admin_email" type="string" column="admin_email"/>
+    </class>
+
+</hibernate-mapping>

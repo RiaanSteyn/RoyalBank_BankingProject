@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Context path="/royalBank_last_final" docBase="royalBank_last_final"  -->
+<!-- 	crossContext="true" reloadable="true" debug="1"> -->
+<!-- 	<Resource name="jdbc/RoyalBank" auth="Container" -->
+<!--           type="javax.sql.DataSource" driverClassName="net.sourceforge.jtds.jdbc.Driver" -->
+<!--           url="jdbc:jtds:sqlserver://localhost;cacheMetaData=true;sendStringParametersAsUnicode=false;instance=SQLEXPRESS" -->
+<!--           username="psiberworks" password="psiberworks" maxActive="20" maxIdle="10" maxWait="-1"/> -->
+<!-- </Context> -->
+<Context path="/royalBank" docBase="royalBank" 
+	crossContext="true" reloadable="true" debug="1">
+	<Resource name="jdbc/RoyalBank" auth="Container"
+          type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
+          url="jdbc:mysql://localhost:3306/royal_bank"
+          username="root" password="root" maxActive="20" maxIdle="10" maxWait="-1"/>
+</Context>

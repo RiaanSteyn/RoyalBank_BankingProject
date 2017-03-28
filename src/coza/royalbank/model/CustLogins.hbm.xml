@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="CustLogins" table="cust_logins">
+        <id name="cust_login_id" column="cust_login_id">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="customer" class="coza.royalbank.model.Customers" column="cust_id" cascade="save-update" />
+        <property name="cust_login_time" type="date" column="cust_login_time"/>
+        <property name="cust_login_ip" type="string" column="cust_login_ip"/>
+        <property name="cust_login_user_agent" type="string" column="cust_login_user_agent"/>
+        <property name="cust_login_security_key" type="string" column="cust_login_security_key"/>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="coza.royalbank.model">
+
+    <class name="Accounts" table="accounts">
+        <id name="acc_id" column="acc_id">
+            <generator class="identity"/>
+        </id>
+        <property name="acc_name" type="string" column="acc_name"/>
+        <property name="acc_min_age" type="integer" column="acc_min_age"/>
+        <property name="acc_max_age" type="integer" column="acc_max_age"/>
+        <property name="acc_min_salary" type="double" column="acc_min_salary"/>
+        <property name="acc_max_salary" type="double" column="acc_max_salary"/>
+        <property name="acc_new_number" type="long" column="acc_new_number"/>
+        <property name="acc_monthly_fee" type="double" column="acc_monthly_fee"/>
+    </class>
+
+</hibernate-mapping>

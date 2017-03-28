@@ -1,0 +1,86 @@
+
+/* ios slider details */
+
+	
+	
+
+
+.sliderContainer {
+	height: 100%;
+	max-height: 350px;
+	padding: 0 0;
+}
+
+.iosSlider {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 900px;
+	height: 350px;
+}
+
+.iosSlider .slider { width: 900px; height: 350px; }
+
+.iosSlider .slider .item { width: 900px; height: 350px; padding: 5px 0 5px 0; }
+
+.iosSlider .slider .item .inner {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 635px;
+	margin: 0 auto;
+	height: 100%;
+	box-shadow: 0 0 10px -5px #000;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+}
+
+.iosSlider .slider .item .inner .text1 {
+	background: none repeat scroll 0 0 #1a2733;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  right: 100px;
+  top: 12px;
+  padding: 5px 2px 0 7px;
+}
+
+.iosSlider .slider .item .inner .text1 span { color: #fff; font: 15px/17px Norican; padding: 0 8px; }
+
+.iosSlider .slider .item .inner .text2 {
+	background: none repeat scroll 0 0 #000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  padding: 5px 7px 7px;
+  position: absolute;
+  right: 0;
+  top: 120px;
+}
+
+.iosSlider .slider .item .inner .text2 span { color: #fff; font: 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.iosSlider .slider .item1 .inner { background-image: url('../../images/slide_img6.jpg'); } 
+
+.iosSlider .slider .item2 .inner { background-image: url('../../images/slide_img7.jpg'); }
+
+.iosSlider .slider .item3 .inner { background-image: url('../../images/slide_img8.jpg'); }
+
+.iosSlider .slider .item4 .inner { background-image: url('../../images/slide_img9.jpg'); }
+
+.iosSlider .slider .item5 .inner { background-image: url('../../images/slide_img11.jpg'); }
+
+@media screen and (max-width: 900px) {
+	.iosSlider .slider .item .inner { width: 900px;	margin: 0%; background-position: 100% 0; }
+	
+	.sliderContainer .slideSelectors {	width: 900px;	margin: 0%; }
+	
+}
+
+@media screen and (max-width: 900px) {
+	.iosSlider .slider .item .inner .text1 span { font: 12px/13px Norican; }
+	
+	.iosSlider .slider .item .inner .text2 { top: 130px; }
+	
+	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif; }
+}
